@@ -62,9 +62,44 @@ alias 755d="find . -type d -exec chmod 755 {} \;"
 
 alias 644f="find . -type f -exec chmod 644 {} \;"
 
-alias open="/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe"
+# alias open="/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe"
 
 # This is specific to WSL 2. If the WSL 2 VM goes rogue and decides not to free
 # up memory, this command will free your memory after about 20-30 seconds.
 #   Details: https://github.com/microsoft/WSL/issues/4166#issuecomment-628493643
 alias drop_cache="sudo sh -c \"echo 3 >'/proc/sys/vm/drop_caches' && swapoff -a && swapon -a && printf '\n%s\n' 'Ram-cache and Swap Cleared'\""
+
+#############################################################################################
+#############################################################################################
+alias rgf='rg --files | fzf'
+
+alias gll='git ll'
+alias gllg='git lg'
+
+# alias glg='git lg'
+
+alias glpp='git pull -p'
+alias gac='git add . && git commit -am'
+alias gcz='npm run gcz'
+
+#alias gdiff='git meld'
+#alias gdiffd='git meld develop'
+alias gdiff='git kdiff2'
+alias gdiffd='git kdiff2 develop'
+alias gmgd='git merge develop'
+alias gtr='git tag | sort -V -r'
+alias gdc='git describe'
+alias gcod='git checkout develop'
+alias gcom='git checkout master'
+alias gcop='git checkout production'
+alias gcol='git checkout daily'
+alias gpm='git push origin master'
+alias gpd='git push origin develop'
+alias gpa='git push origin develop && git push origin master && git push --tags'
+# alias gbda='git branch --no-color --merged | command grep -vE "^(\*|\s*(master|develop|dev|production|prod|feature/offline)\s*$)" | command xargs -n 0 git branch -d'
+alias gbda='git branch --no-color --merged | command grep -vE "^(\*|\s*(master|develop|dev|production|prod)\s*$)" | command xargs -n 0 git branch -d'
+
+# https://github.com/kaelzhang/shell-safe-rm, sudo npm i -g safe-rm
+# alias rm='safe-rm'
+
+

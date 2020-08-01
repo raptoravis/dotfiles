@@ -126,41 +126,7 @@ prompt_dir() {
   prompt_segment cyan black '%~'
 }
 
-alias rgf='rg --files | fzf'
-
-alias llt='ll -tr'
-
-alias gll='git ll'
-alias gllg='git lg'
-
-# alias glg='git lg'
-
-alias glpp='git pull -p'
-alias gac='git add . && git commit -am'
-alias gcz='npm run gcz'
-
-#alias gdiff='git meld'
-#alias gdiffd='git meld develop'
-alias gdiff='git kdiff3'
-alias gdiffd='git kdiff3 develop'
-alias gmgd='git merge develop'
-alias gtr='git tag | sort -V -r'
-alias gdc='git describe'
-alias gcod='git checkout develop'
-alias gcom='git checkout master'
-alias gcop='git checkout production'
-alias gcol='git checkout daily'
-alias gpm='git push origin master'
-alias gpd='git push origin develop'
-alias gpa='git push origin develop && git push origin master && git push --tags'
-# alias gbda='git branch --no-color --merged | command grep -vE "^(\*|\s*(master|develop|dev|production|prod|feature/offline)\s*$)" | command xargs -n 1 git branch -d'
-alias gbda='git branch --no-color --merged | command grep -vE "^(\*|\s*(master|develop|dev|production|prod)\s*$)" | command xargs -n 1 git branch -d'
-
-# https://github.com/kaelzhang/shell-safe-rm, sudo npm i -g safe-rm
-# alias rm='safe-rm'
-
 unsetopt BG_NICE
-
 
 function options() {
   PLUGIN_PATH="$HOME/.oh-my-zsh/plugins/"
@@ -171,11 +137,9 @@ function options() {
 
 # for nvm
 # source ~/.bash_profile
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
 ###-begin-pm2-completion-###

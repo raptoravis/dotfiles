@@ -6,3 +6,23 @@
 
 [include]
 	path = ~/.gitconfig.user
+
+[diff]
+  tool = kdiff3
+
+[difftool]
+  prompt = false
+
+[merge]
+	tool = kdiff3
+[mergetool]
+  prompt = false
+
+[alias]
+	meld = !git difftool -t meld --dir-diff
+	kdiff3 = !git difftool -t kdiff3 --dir-diff
+	last = log -1
+	l = log --pretty=format:'%C(green)%h %C(yellow) %<(20,trunc) %ar %C(green)%<(8,trunc)%an %C(reset)%<(80,trunc)%s' --date=short
+	ll = log --pretty=format:'%C(green)%h %C(yellow) %<(20,trunc) %ar %C(green)%<(8,trunc)%an %C(reset)%<(80,trunc)%s' --date=short -50
+	lg = log --pretty=format:'%C(green)%h %C(yellow) %<(20,trunc) %ai %C(green)%<(8,trunc)%an %C(reset)%<(80,trunc)%s' --date=short -50
+	pp = pull -p
