@@ -222,15 +222,11 @@ fi
 
 
 ###-end-pm2-completion-###
+
+[[ -e ~/.bashrc ]] && emulate sh -c 'source ~/.bashrc'
+
 #
-# export http_proxy=http://web-proxy.tencent.com:8080
-# export https_proxy=http://web-proxy.tencent.com:8080
-#
-#
-#
+# export http_proxy=http://web-proxy.xxxx.com:8080
+# export https_proxy=http://web-proxy.xxxx.com:8080
 #
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
-
-# source ~/.bashrc

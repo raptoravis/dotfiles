@@ -125,9 +125,13 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 
-mv .bashrc .bashrc.bak
-mv .profile .profile.bak
-mv .zshrc .zshrc.bak
+rm -f .bashrc.bak && mv .bashrc .bashrc.bak
+rm -f .profile.bak && mv .profile .profile.bak
+rm -f .zshrc.bak && mv .zshrc .zshrc.bak
+rm -f .aliases.bak && mv .aliases .aliases.bak
+rm -f .gitconfig.bak && mv .gitconfig .gitconfig.bak
+rm -f .tmux.conf.bak && mv .tmux.conf .tmux.conf.bak
+rm -f .vimrc.bak && mv .vimrc .vimrc.bak
 
 # Clone down this dotfiles repo to your home directory. Feel free to place
 # this anywhere you want, but remember where you've cloned things to.
