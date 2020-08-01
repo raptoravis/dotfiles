@@ -114,7 +114,20 @@ sudo apt-get update && sudo apt-get install -y \
   shellcheck \
   ripgrep \
   pass \
+  zsh \
   python3-pip
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+chsh -s /bin/zsh
+
+# plugins=(zsh-autosuggestions)
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+
+mv .bashrc .bashrc.bak
+mv .profile .profile.bak
+mv .zshrc .zshrc.bak
 
 # Clone down this dotfiles repo to your home directory. Feel free to place
 # this anywhere you want, but remember where you've cloned things to.
@@ -132,6 +145,7 @@ mkdir -p ~/.local/bin \
   && ln -s ~/dotfiles/.profile ~/.profile \
   && ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf \
   && ln -s ~/dotfiles/.vimrc ~/.vimrc \
+  && ln -s ~/dotfiles/.zshrc ~/.zshrc \
   && ln -s ~/dotfiles/.local/bin/toggle-dark-mode ~/.local/bin/toggle-dark-mode \
   && sudo ln -s ~/dotfiles/etc/wsl.conf /etc/wsl.conf
 
