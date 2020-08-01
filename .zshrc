@@ -135,6 +135,13 @@ function options() {
   done
 }
 
+# function git_prompt_info() {
+  # ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+  # echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$ZSH_THEME_GIT_PROMPT_SUFFIX"
+# }
+
+export PROMPT='${ret_status} %{$fg[cyan]%}%~%{$reset_color%} %{$fg[blue]%}$(git_current_branch)%{$reset_color%} $ '
+
 # for nvm
 # source ~/.bash_profile
 #export NVM_DIR="$HOME/.nvm"
