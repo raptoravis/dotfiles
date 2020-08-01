@@ -153,6 +153,11 @@ mkdir -p ~/.local/bin \
   && ln -s ~/dotfiles/.local/bin/toggle-dark-mode ~/.local/bin/toggle-dark-mode \
   && sudo ln -s ~/dotfiles/etc/wsl.conf /etc/wsl.conf
 
+# Getting plug installed
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# :PlugInstall
+# vim +PlugInstall +qall
+
 # Create your own personal ~/.gitconfig.user file. After copying the file,
 # you should edit it to have your name and email address so git can use it.
 cp ~/dotfiles/.gitconfig.user ~/.gitconfig.user
