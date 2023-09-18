@@ -1,0 +1,3 @@
+vfs:
+  children:
+    - source: E:\dev

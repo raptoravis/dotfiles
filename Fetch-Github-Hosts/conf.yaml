@@ -1,0 +1,8 @@
+client:
+    customurl: ""
+    interval: 360
+    method: 官方指定hosts源
+    selectorigin: FetchGithubHosts
+server:
+    interval: 60
+    port: 9898
