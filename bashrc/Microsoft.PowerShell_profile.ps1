@@ -49,13 +49,25 @@ function goto {
             Set-Location -Path "E:\downloads\weiyun\disk\latest\dev\fav"
         }
         default {
-            Write-Output "Invalid location"
+            Write-Output "possible argments: torex/dev/dl/programs/fav"
         }
     }
 }
 
 #Set-Alias gt goto
 #Set-Alias g goto
+
+function pve {
+    param (
+        $env_name
+    )
+
+    conda activate $env_name
+}
+
+function pved {
+    conda deactivate
+}
 
 $ENV:STARSHIP_CONFIG = "$HOME\.starship\starship.toml"
 Invoke-Expression (&starship init powershell)
