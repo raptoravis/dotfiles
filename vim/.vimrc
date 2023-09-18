@@ -97,6 +97,8 @@ map <C-n> :NERDTreeToggle<CR>
 nnoremap <C-p> :Files<Cr>
 nnoremap <C-l> :Buffers<Cr>
 
+nnoremap ,c :call NERDComment(0,"toggle")<CR>
+
 let g:fzf_layout = { 'down': '40%' }
 
 " https://codevion.github.io/#!index.md
