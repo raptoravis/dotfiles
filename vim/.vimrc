@@ -98,6 +98,7 @@ nnoremap <C-p> :Files<Cr>
 nnoremap <C-l> :Buffers<Cr>
 
 nnoremap ,c :call NERDComment(0,"toggle")<CR>
+nnoremap <C-_> :call NERDComment(0,"toggle")<CR>
 
 let g:fzf_layout = { 'down': '40%' }
 
