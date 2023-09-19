@@ -65,8 +65,12 @@ function goto {
 
 #Set-Alias -Name gac -Value gaa && gcam
 function gac {
+    param (
+        $p
+    )
+
     gaa
-    gcam
+    gcam $p
 }
 
 function pve {
