@@ -10,8 +10,14 @@ Set-Alias ll ls
 #Set-Alias llt ls -la
 Set-Alias grep findstr
 #Set-Alias python3 python
-#Set-Alias -Name gac -Value gaa && gcam
 Set-Alias -Name e -Value explorer.exe
+#Set-Alias -Name llt -Value dir -File | sort LastWriteTime -Descending
+#Set-Alias -Name llt -Value dir -File | sort LastWriteTime -Ascending
+
+function llt {
+    #dir -File | sort LastWriteTime -Descending
+    dir -File | sort LastWriteTime 
+}
 
 
 Set-Alias -Name editor -Value nvim
@@ -20,8 +26,8 @@ Set-Alias -Name edit -Value editor
 function profile_alias { editor $PROFILE }
 Set-Alias -Name profile -Value profile_alias
 
-#function reload_alias { &amp; $PROFILE }
-function reload_alias { & $PROFILE }
+function reload_alias { &amp; $PROFILE }
+#function reload_alias { & $PROFILE }
 
 Set-Alias -Name reload -Value reload_alias
 
@@ -57,6 +63,12 @@ function goto {
 #Set-Alias gt goto
 #Set-Alias g goto
 
+#Set-Alias -Name gac -Value gaa && gcam
+function gac {
+    gaa
+    gcam
+}
+
 function pve {
     param (
         $env_name
@@ -83,6 +95,7 @@ Set-PSReadLineOption -EditMode Windows
 Import-Module PSFzf
 Set-PsFzfOption -PSReadLineChordProvider 'Ctrl+d' -PSReadLineChordReverseHistory 'Ctrl+r'
 
+Import-Module -Name Terminal-Icons
 
 # ### dotnet shortcuts ###
 # Set-PSReadLineKeyHandler -Key Ctrl+Shift+b `
