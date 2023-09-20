@@ -75,8 +75,8 @@ function gac {
 
 #Set-Alias -Name gpa -Value gp && gp gh
 function gpa {
-    gp
-    gp gh
+    git push
+    git push gh
 }
 
 function pve {
