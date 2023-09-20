@@ -73,6 +73,12 @@ function gac {
     gcam $p
 }
 
+#Set-Alias -Name gpa -Value gp && gp gh
+function gpa {
+    gp
+    gp gh
+}
+
 function pve {
     param (
         $env_name
