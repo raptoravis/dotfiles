@@ -26,7 +26,7 @@ Set-Alias -Name edit -Value editor
 function profile_alias { editor $PROFILE }
 Set-Alias -Name profile -Value profile_alias
 
-function reload_alias { &amp; $PROFILE }
+function reload_alias { & $PROFILE }
 #function reload_alias { & $PROFILE }
 
 Set-Alias -Name reload -Value reload_alias
