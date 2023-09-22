@@ -54,6 +54,9 @@ function goto {
         "fav" {
             Set-Location -Path "E:\downloads\weiyun\disk\latest\dev\fav"
         }
+        "nvim" {
+            Set-Location -Path "$HOME\AppData\Local\nvim"
+        }
         default {
             Write-Output "possible argments: torex/dev/dl/programs/fav"
         }
