@@ -16,7 +16,7 @@ Set-Alias -Name e -Value explorer.exe
 
 function llt {
     #dir -File | sort LastWriteTime -Descending
-    dir -File | sort LastWriteTime 
+    dir | sort LastWriteTime 
 }
 
 
