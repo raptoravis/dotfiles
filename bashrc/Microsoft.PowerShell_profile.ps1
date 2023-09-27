@@ -1,6 +1,11 @@
 # New-Alias k kubectl
 # Remove-Alias h
 # New-Alias h helm
+$proxy="http://127.0.0.1:7890"
+$env:HTTP_PROXY=$proxy
+$env:HTTPS_PROXY=$proxy
+$env:ALL_PROXY=$proxy
+
 
 #### common aliases ####
 #Set-Alias g git
